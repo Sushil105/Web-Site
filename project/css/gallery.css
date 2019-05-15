@@ -1,0 +1,122 @@
+.container {
+	width: 90vw;
+	height: 100%;
+	background: white;
+	margin: 0 auto;
+}
+
+#footer_container {
+	height: 120px;
+	padding-top: 2%;
+	color: #fff;
+	background-color: #1fc8db;
+	background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+.social {
+	list-style: none;
+}
+
+.social li a {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 20px;
+	font-weight: 500;
+	display: inline;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.social li a:hover {
+	color: #ff7bac;
+}
+
+.copyright_text {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	padding-top: 0%;
+	float: left;
+	line-height: 1.5em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size: .8em;
+	color: #fff;
+	padding-left: 5%;
+}
+
+section {
+	padding: 10px;
+}
+.song {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.sectionContentHeader {
+	text-align: center;
+	margin-top: 70px;
+	width: inherit;
+	text-transform: uppercase;
+	font-size: xx-large;
+	font-weight: lighter;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	/* background-color: #2196F3; */
+	padding: 10px;
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	/* border: 1px solid rgba(0, 0, 0, 0.8); */
+	padding: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.contentImage {
+	width: 400px;
+	height: 250px;
+	margin-bottom:20px; 	
+	/* margin-left: 100px; */
+}
+
+.mainContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.mainContentHeader {
+	border-radius: 10px;
+	font-weight: bolder;
+	font-size: 40px;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-color: #dc3545 !important;
+	color: #fff !important;
+}
+
+.contentImage img {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 2px rgba(102, 102, 102, .5);
+	border: 2px solid #fff;
+}

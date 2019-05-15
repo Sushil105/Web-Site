@@ -1,0 +1,30 @@
+.container {
+    border: 1px solid black;
+    display: block;
+    padding: 25px;
+    height: 1750px;
+    margin: 0px auto;
+    width: 931px;
+}
+ body {
+        max-width: 800px;
+        margin: 0  auto;
+
+      }
+      .sender-column {
+        text-align: right;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+      p,ul,ol,dl,address {
+        font-size: 1.1em;
+      }
+      p, li, dd, dt, address {
+        line-height: 1.5;
+      }
+
+      

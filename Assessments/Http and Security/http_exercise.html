@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTTP Questions</title>
+	<style>
+	p{
+		font-size:20px;
+	}
+	.one{
+		font-weight:bold;
+		font-size:24px;
+		margin-bottom:-10px;
+	}
+	.two{
+		padding: 5px;
+		font-size:19px;
+		font-weight:bold;
+		margin-bottom:-10px;
+	}
+	</style>
+</head>
+<body>
+<ol>
+<li class="one">What is the Hypertext Transfer Protocol (HTTP)?</li>
+<p>
+Hypertext Transfer Protocol (HTTP) is an application-layer and stateless protocol for transmitting hypermedia documents, such as HTML which was specially designed for communication between web browsers and web servers.
+</p>
+<li class="one">Why is HTTP called a stateless protocol?</li>
+<p>
+HTTP is called a stateless protocol because the server does not keep any data between two requests i.e. every request are executed independently.
+</p>
+<li class="one">Describe the three phases of establishing a session using client-server protocols such as HTTP.</li>
+<p>
+In client-server protocols, like HTTP, sessions consist of three phases:
+<ol>
+<li class="two">The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).</li>
+<p>
+Client is the one who usually initiate connection in transport layer of TCP/IP. With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80.
+</p>
+<li class="two">The client sends its request, and waits for the answer.</li>
+<p>
+ A client request consists of text directives, separated by CRLF (carriage return, followed by line feed), divided into three blocks:
+ <br>
+ <br>
+ First step done by the client in initiating a http connection is establishing a TCP connection with the http server.
+ <br>
+ Subsequent lines gives information to server about which data is suitable.
+ <br>
+ Final block contains additional block of data used by POST method.
+</p>
+<li class="two">The server processes the request, sending back its answer, providing a status code and appropriate data.</li>
+<p>
+On getting the request from the client, the server responds, by revealing some information about itself, and metadata about the data asked by the client, along with the data.
+Then server sends a status code of 200 which means the request has succeeded to the user.
+Some of other status code are 301 which means URI of requested resource has changed, 404 for requested resource not found.
+</p>
+</ol>
+</p>
+<li class="one">Describe the parameters on a get and post request.</li>
+<h3>GET</h3>
+<p style="margin-top:-6px;">
+	When the GET request method is used, the client sends the server certain
+	GET parameters through the requested URL. These parameters are pairs of names and their
+	corresponding values, so-called name-value pairs.
+	These are added to the URL with a “?” sign and tell the server which resources are meant.
+	 The name and value are always separated using a “=” sign.
+	<br><br>
+	The syntax is as follows:
+	<strong>http://www.domain.com/index.html*?name1=value1</strong>
+	<br><br>
+	Multiple parameters, as well as entire lists, can be transmitted to the server. Here, the various parameters are separated using a “&” sign.
+<br>
+<strong>http://www.domain.com/index.html*?name1=value1&name2=value2</strong>
+<br>
+If the request is syntactically correct, the server sends a response.
+</p>
+<h3>POST</h3>
+<p style="margin-top:-10px;">
+Post method is similar to get method mostly. But the only difference between them is that data sent through POST method will not visible in the URL.
+</p>
+<li class="one">
+	What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?
+</li>
+<p>
+	HTTP response status codes are speicif codes that indicates whether a specific HTTP request has been successfully completed.<br>
+	They are grouped in five classes: <em>informational responses, successful responses, redirects, client errors, and servers errors.</em>
+<br>
+	Status Code 200 : The request has been completed successfully.
+<br>
+	Status Code 404 : The server cannot find the requested resource.
+</p>
+<li class="one">What are HTTP cookies? Give an example.</li>
+<p>
+An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with the next request to the same server.
+<br>
+Facebook uses cookies to verify a user's account and determine when s/he's logged in so facebook can make it easier for them to access the Facebook products and show them the appropriate experience and features.
+</p>
+<li class="one">
+	Why are cookies a security issue?
+</li>
+<p>
+	Cookies are seen as security issues because hackers can exploit user's data and experience using them.
+</p>
+<li class="one">Describe session hijacking and XSS</li>
+<h3>
+Session hijacking
+</h3>
+<p style="margin-top:-10px;">
+ In session hijacking, an attacker impels the user to use the attacker’s or another’s session ID. This can be done by using the cookie’s browser directive path, hence the user pretends to be someone else. Using this method, an attacker can urge the user to log in as the attacker on various application levels.
+</p>
+<h3>XSS</h3>
+<p style="margin-top:-10px;">
+In order to carry out a cross-site scripting exploit, an attacker has to place the exploit in a cookie. Then the exploit vector will fetch the payload from the cookie and the exploitation is carried out. This type of attack will become difficult if the cookie has already been set; in this case, the attacker has to control the first cookie in the cookie string and only then can the attack be carried out.
+</p>
+<li class="one">Describe Cross-site request forgery(CSRF).</li>
+<p>
+	A browser sends a cookie in response to a request, regardless of where the request came from. This is where the actual problem with cookies comes in. When a website receives a request, it cannot distinguish whether the action is initiated by the user or not. It looks for the cookie and, if the cookie is available, it deliberately performs the action as if the user initiated it.
+<br>
+Lets consider that a user “Rahul” browses through a legitimate website “www.xyz.com” and has a valid cookie on his hard disk. Meanwhile, an attacker, “Drokp,” embeds a link to perform some exchange action of “www.xyz.com” in an image and posts it on a site known as “www.hellos.com.” When the user Rahul visits “www.hellos.com,” the webpage loads the image and in turns gives a exchange request to “www.xyz.com.” When the web server receives the request, it looks for the cookie. It then finds Rahul’s cookie, interprets this as a valid request, and performs the exchange action.
+</p>
+<li class="one">What are Cross-site HTTP requests (CORS) and what requests use CORS?</li>
+<p>
+	(CORS) is a mechanism that uses additional HTTP headers to tell a browser to let a web application running at one origin (domain) have permission to access selected resources from a server at a different origin. A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, and port) than its own origin.
+</p>
+<strong style="font-size:20px;">Following requests use CORS:</strong>
+<ol>
+<li class="two">Invocations of the XMLHttpRequest or Fetch APIs in a cross-site manner</li>
+<li class="two">Web Fonts</li>
+<li class="two">WebGL textures.</li>
+<li class="two">Images/video frames drawn to a canvas using drawImage().</li>
+</ol>
+</ol>
+</body>
+</html>
