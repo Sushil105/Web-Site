@@ -74,7 +74,7 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
-/*$(document).ready(function() {
+$(document).ready(function() {
 
     var delay = 300; // milliseconds
     var cookie_expire = 0; // days
@@ -106,4 +106,4 @@ function carousel() {
         });
     }
 
-});*/
+});
